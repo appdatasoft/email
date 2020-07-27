@@ -1,0 +1,21 @@
+{
+  "name": "emailserver",
+  "version": "1.0.0",
+  "description": "express server for mail on aws ses",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js",
+    "client": "npm start --prefix client",
+    "server": "node server.js",
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix client  && npm run build --prefix client"
+  },
+  "author": "vamshiraghava@gmail.com",
+  "license": "MIT",
+  "dependencies": {
+    "aws-sdk": "^2.720.0",
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "nodemon": "^2.0.4"
+  }
+}
